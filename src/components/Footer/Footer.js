@@ -9,7 +9,7 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Footer.scss';
+import s from './Footer.css';
 import Link from '../Link';
 
 function Footer() {
@@ -20,6 +20,8 @@ function Footer() {
         <span className={s.spacer}>·</span>
         <Link className={s.link} to="/">Home</Link>
         <span className={s.spacer}>·</span>
+        <Link className={s.link} to="/admin">Admin</Link>
+        <span className={s.spacer}>·</span>
         <Link className={s.link} to="/privacy">Privacy</Link>
         <span className={s.spacer}>·</span>
         <Link className={s.link} to="/not-found">Not Found</Link>
@@ -28,4 +30,4 @@ function Footer() {
   );
 }
 
-export default withStyles(Footer, s);
+export default withStyles(s)(Footer);

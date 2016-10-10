@@ -9,19 +9,22 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Register.scss';
+import Layout from '../../components/Layout';
+import s from './Register.css';
 
 function Register({ title }) {
   return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <h1>{title}</h1>
-        <p>...</p>
+    <Layout>
+      <div className={s.root}>
+        <div className={s.container}>
+          <h1>{title}</h1>
+          <p>...</p>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
 Register.propTypes = { title: PropTypes.string.isRequired };
 
-export default withStyles(Register, s);
+export default withStyles(s)(Register);

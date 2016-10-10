@@ -9,7 +9,7 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Feedback.scss';
+import s from './Feedback.css';
 
 function Feedback() {
   return (
@@ -29,4 +29,4 @@ function Feedback() {
   );
 }
 
-export default withStyles(Feedback, s);
+export default withStyles(s)(Feedback);
