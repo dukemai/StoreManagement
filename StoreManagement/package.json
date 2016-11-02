@@ -65,13 +65,11 @@
   },
   "eslintConfig": {
     "root": true,
+    "indent": ["space", "tab"],
     "env": {
       "browser": true,
       "jasmine": true
     },
-    "extends": [
-      "xo-react/space",
-      "xo-space/esnext"
-    ]
+    "extends": ["xo/esnext", "xo-react", "xo-react/space"]
   }
 }
