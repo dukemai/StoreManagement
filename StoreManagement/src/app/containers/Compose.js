@@ -6,8 +6,7 @@ import TextEditor from '../components/text-editor/TextEditor';
 import * as TodoActions from '../actions/index';
 
 class Compose extends Component {
-  render() {
-    const {todos, actions} = this.props;
+  render() {   
     return (
       <div>
         <TextEditor />
@@ -17,19 +16,18 @@ class Compose extends Component {
 }
 
 Compose.propTypes = {
-  todos: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+ 
 };
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos
+   
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(TodoActions, dispatch)
+  
   };
 }
 

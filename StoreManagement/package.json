@@ -54,7 +54,9 @@
     "eslint-plugin-babel": "^3.1.0",
     "babel-core": "^6.13.0",
     "babel-polyfill": "^6.7.4",
-    "babel-preset-es2015": "^6.2.0"
+    "babel-preset-es2015": "^6.2.0",
+    "medium-editor": "*",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "scripts": {
     "build": "gulp",
@@ -65,11 +67,18 @@
   },
   "eslintConfig": {
     "root": true,
-    "indent": ["space", "tab"],
+    "indent": [
+      "space",
+      "tab"
+    ],
     "env": {
       "browser": true,
       "jasmine": true
     },
-    "extends": ["xo/esnext", "xo-react", "xo-react/space"]
+    "extends": [
+      "xo/esnext",
+      "xo-react",
+      "xo-react/space"
+    ]
   }
 }
