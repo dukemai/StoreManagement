@@ -7,13 +7,13 @@ var MediumEditor = require('medium-editor');
 export default class TextEditor extends Component {
   render() {
     return (
-      <div className="text-editor">        
+      <div className="text-editor">      
+        {this.props.text} 
       </div>
     );
   }  
   componentDidMount() {
     const dom = ReactDOM.findDOMNode(this);
-    console.log(MediumEditor);
     this.medium = new MediumEditor(dom, this.props.options);
     this.medium.subscribe('editableInput', (e) => {
       this._updated = true;

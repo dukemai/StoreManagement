@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   module: {
     preLoaders: [
-    
+
     ],
 
     loaders: [
@@ -19,13 +19,21 @@ module.exports = {
         ]
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css)$/,
         loaders: [
           'style',
           'css',
           'sass',
           'postcss'
         ]
+      },
+      {
+        test: /\.(scss)$/,
+        loaders: ["style", "css", "sass"]
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file?name=src/content/fonts/[name].[ext]'
       },
       {
         test: /\.js$/,
